@@ -8,6 +8,11 @@ public class ScoutRepository
         _scouts.Add(scout);
     }
 
+    public List<Scout> GetAllScouts()
+    {
+        return _scouts;
+    }
+
     public void AddActivity(Activity activity)
     {
         _activities.Add(activity);
