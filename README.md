@@ -2,18 +2,10 @@
 
 Vi Bengtsfors Scoutförening organiserar många aktiviteter för våra medlemmar, men vi har svårt att hålla koll på vem som deltar och vilka aktiviteter som har genomförts. Vi skulle vilja ha ett system där vi kan logga varje aktivitet och notera vilka som varit närvarande. Det vore också bra om vi kunde följa upp med noteringar om vad vi gjorde under aktiviteten, så vi har historik på genomförda scoutmöten. Dessutom vore det bra om vi kunde skicka automatiska påminnelser om kommande aktiviteter.
 
-* Skapa och öppna en mapp som heter "Scout"
+Vi kommer behöva två klasser: en för att hålla reda på scouter och en för att hålla reda på aktiviteter. 
+Vi behöver också en klass som håller reda på scouter och aktiviteter, så att det inte behöver ligga i koden för användargränssnittet.
 
-* Öppna terminalen och skriv följande kommandon:
-```bash
-dotnet new console
-dotnet new gitignore
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-* Skapa klassen Scout i filen "Scout.cs" och ge den följande egenskaper: Name, Email, Phone och Birthdate. 
+* Skapa klassen Scout i filen "Scout.cs" och ge den följande egenskaper: Name, Email, Phone och Birthdate. Vilka typer är lämpliga för dessa egenskaper? 
 
 * Skapa klassen "Activity" i filen "Activity.cs" och ge den följande egenskaper: Name, Date, Location, Participants och Notes. Ge den också en metod "AddParticipant(Scout s)" som lägger till en scout i listan Participants.
 
