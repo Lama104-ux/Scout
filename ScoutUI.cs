@@ -26,7 +26,7 @@ class ScoutUI
         Console.WriteLine("A: Registrera scout");
         Console.WriteLine("B: Visa scoutregister");
         Console.WriteLine("C: Skapa aktivitet");
-        Console.WriteLine("D: Visa aktiviteter");
+        Console.WriteLine("D: Kommande aktiviteter");
         Console.WriteLine("Q: Avsluta");
     }
 
