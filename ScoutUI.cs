@@ -16,7 +16,7 @@ class ScoutUI
         {
             Console.Clear();
             PrintMenu();
-            MakeChoice(Console.ReadLine().ToUpper());
+            MakeChoice(Input.GetChar("Välj: "));
         }
     }
 
@@ -30,23 +30,23 @@ class ScoutUI
         Console.WriteLine("Q: Avsluta");
     }
 
-    private void MakeChoice(string input)
+    private void MakeChoice(char input)
     {
         switch (input)
         {
-            case "A":
+            case 'A':
                 RegisterScout();
                 break;
-            case "B":
+            case 'B':
                 ShowAllScouts();
                 break;
-            case "C":
+            case 'C':
                 CreateActivity();
                 break;
-            case "D":
+            case 'D':
                 ShowAllActivities();
                 break;
-            case "Q":
+            case 'Q':
                 Environment.Exit(0);
                 break;
         }
@@ -66,8 +66,8 @@ class ScoutUI
     private void CreateActivity()
     {
         Console.Clear();
-        string name = GetString("Ange aktivitetens namn:");
-        DateTime date = GetDate("Ange datum för aktiviteten:");
+        string name = Input.GetString("Ange aktivitetens namn:");
+        DateTime date = Input.GetDate("Ange datum för aktiviteten:");
         _repo.AddActivity(new Activity(name, date));
         Console.WriteLine("Aktiviteten är skapad!");
         Console.ReadKey();
@@ -76,8 +76,8 @@ class ScoutUI
     private void RegisterScout()
     {
         Console.Clear();
-        string name = GetString("Ange scoutens namn:");
-        string email = GetString("Ange scoutens e-post:");
+        string name = Input.GetString("Ange scoutens namn:");
+        string email = Input.GetEmail("Ange scoutens e-post:");
         _repo.AddScout(new Scout(name, email));
         Console.WriteLine("Scouten är registrerad!");
         Console.ReadKey();
@@ -92,32 +92,5 @@ class ScoutUI
             Console.WriteLine($"Namn: {scout.Name}, E-post: {scout.Email}");
         }
         Console.ReadKey();
-    }
-
-    private string GetString(string prompt = "")
-    {
-        do
-        {
-            Console.WriteLine(prompt);
-            string input = Console.ReadLine();
-            if (!string.IsNullOrWhiteSpace(input))
-            {
-                return input;
-            }
-            Console.WriteLine("Du måste ange något!");
-        } while (true);
-    }
-
-    private DateTime GetDate(string prompt = "")
-    {
-        do
-        {
-            Console.WriteLine(prompt);
-            if (DateTime.TryParse(Console.ReadLine(), out DateTime date))
-            {
-                return date;
-            }
-            Console.WriteLine("Du måste ange ett datum!");
-        } while (true);
     }
 }
