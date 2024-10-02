@@ -32,25 +32,23 @@ class ScoutUI
 
     private void MakeChoice(string input)
     {
-        if (input == "A")
+        switch (input)
         {
-            RegisterScout();
-        }
-        if (input == "B")
-        {
-            ShowAllScouts();
-        }
-        if (input == "C")
-        {
-            CreateActivity();
-        }
-        if (input == "D")
-        {
-            ShowAllActivities();
-        }
-        if (input == "Q")
-        {
-            Environment.Exit(0);
+            case "A":
+                RegisterScout();
+                break;
+            case "B":
+                ShowAllScouts();
+                break;
+            case "C":
+                CreateActivity();
+                break;
+            case "D":
+                ShowAllActivities();
+                break;
+            case "Q":
+                Environment.Exit(0);
+                break;
         }
     }
 
