@@ -58,7 +58,10 @@ class ScoutUI
     {
         Console.Clear();
         Console.WriteLine("ALLA SCOUTER:");
-        //foreach (var scout in _repo.GetAllScouts())
+        foreach (var scout in _repo.GetAllScouts())
+        {
+            Console.WriteLine($"Namn: {scout.Name}, E-post: {scout.Email}");
+        }
         Console.ReadKey();
     }
 

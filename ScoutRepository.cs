@@ -28,6 +28,21 @@ class ScoutRepository //Medlemslista
         return _activities[activityID];
     }
 
+    public List<Activity> GetAllActivities()
+    {
+        return _activities;
+    }
+
+    public Scout GetScoutById(int scoutId)
+    {
+        return _scouts[scoutId];
+    }
+
+    public List<Scout> GetAllScouts()
+    {
+        return _scouts;
+    }
+
     //Hämta kommande aktiviteter
     // public List<Activity> GetComingActivities()
     // {
