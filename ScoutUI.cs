@@ -67,7 +67,7 @@ class ScoutUI
     {
         Console.Clear();
         string name = Input.GetString("Ange aktivitetens namn:");
-        DateTime date = Input.GetDate("Ange datum för aktiviteten:");
+        DateTime date = Input.GetDateTime("Ange datum för aktiviteten:");
         _repo.AddActivity(new Activity(name, date));
         Console.WriteLine("Aktiviteten är skapad!");
         Console.ReadKey();
@@ -76,9 +76,10 @@ class ScoutUI
     private void RegisterScout()
     {
         Console.Clear();
-        string name = Input.GetString("Ange scoutens namn:");
-        string email = Input.GetEmail("Ange scoutens e-post:");
-        _repo.AddScout(new Scout(name, email));
+        string name = Input.GetString("Namn: ");
+        string email = Input.GetEmail("E-post: ");
+        DateOnly dob = Input.GetDateOnly("Födelsedatum: ");
+        _repo.AddScout(name, email, dob);
         Console.WriteLine("Scouten är registrerad!");
         Console.ReadKey();
     }

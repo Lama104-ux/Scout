@@ -5,10 +5,19 @@ class ScoutRepository //Medlemslista
     List<Scout> _scouts = new();
     List<Activity> _activities = new();
 
-    public void AddScout(Scout scout)
+    public bool AddScout(string name, string email, DateOnly birthdate)
     {
-        //TODO Kolla om scout-objektet är ok innan vi lägger in det
+        if (string.IsNullOrWhiteSpace(name)) return false;
+        if (string.IsNullOrWhiteSpace(email)) return false;
+
+        Scout scout = new()
+        {
+            Name = name,
+            Email = email,
+            DateOfBirth = birthdate
+        };
         _scouts.Add(scout);
+        return true;
     }
 
     public void AddActivity(Activity activity)
@@ -44,10 +53,19 @@ class ScoutRepository //Medlemslista
     }
 
     //Hämta kommande aktiviteter
-    // public List<Activity> GetComingActivities()
-    // {
+    public List<Activity> GetUpcomingActivities()
+    {
+        List<Activity> upcomingActivities = new();
+        foreach (var activity in _activities)
+        {
+            if (activity.Date.Date >= DateTime.Now)
+            {
+                upcomingActivities.Add(activity);
+            }
 
-    // }
+        }
+        return upcomingActivities;
+    }
 
     //Skicka påminnelser till alla scouter om kommande aktiviteter
 

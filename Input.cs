@@ -28,12 +28,25 @@ static class Input
         } while (true);
     }
 
-    public static DateTime GetDate(string prompt = "")
+    public static DateTime GetDateTime(string prompt = "")
     {
         do
         {
             Console.Write(prompt);
             if (DateTime.TryParse(Console.ReadLine(), out DateTime date))
+            {
+                return date;
+            }
+            Console.WriteLine("Du måste ange ett datum!");
+        } while (true);
+    }
+
+    public static DateOnly GetDateOnly(string prompt = "")
+    {
+        do
+        {
+            Console.Write(prompt);
+            if (DateOnly.TryParse(Console.ReadLine(), out DateOnly date))
             {
                 return date;
             }
