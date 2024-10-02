@@ -55,8 +55,8 @@ class ScoutUI
     private void ShowAllActivities()
     {
         Console.Clear();
-        Console.WriteLine("ALLA AKTIVITETER:");
-        foreach (var activity in _repo.GetAllActivities())
+        Console.WriteLine("KOMMANDE AKTIVITETER:");
+        foreach (var activity in _repo.GetUpcomingActivities())
         {
             Console.WriteLine(activity.Info);
         }
@@ -66,8 +66,8 @@ class ScoutUI
     private void CreateActivity()
     {
         Console.Clear();
-        string name = Input.GetString("Ange aktivitetens namn:");
-        DateTime date = Input.GetDateTime("Ange datum för aktiviteten:");
+        string name = Input.GetString("Ange aktivitetens namn: ");
+        DateTime date = Input.GetDateTime("Ange datum för aktiviteten: ");
         _repo.AddActivity(new Activity(name, date));
         Console.WriteLine("Aktiviteten är skapad!");
         Console.ReadKey();
@@ -90,7 +90,7 @@ class ScoutUI
         Console.WriteLine("ALLA SCOUTER:");
         foreach (var scout in _repo.GetAllScouts())
         {
-            Console.WriteLine($"Namn: {scout.Name}, E-post: {scout.Email}");
+            Console.WriteLine($"Namn: {scout.Name}, E-post: {scout.Email}, Ålder: {scout.Age}");
         }
         Console.ReadKey();
     }
