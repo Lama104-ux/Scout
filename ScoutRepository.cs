@@ -26,7 +26,6 @@ class ScoutRepository //Medlemslista
         _activities.Add(activity);
     }
 
-    //Registerea deltagare till aktivitet
     public void RegisterParticipantToActivity(int scoutId, int activityID)
     {
         _activities[activityID].Participants.Add(_scouts[scoutId]);
@@ -52,7 +51,6 @@ class ScoutRepository //Medlemslista
         return _scouts;
     }
 
-    //Hämta kommande aktiviteter
     public List<Activity> GetUpcomingActivities()
     {
         List<Activity> upcomingActivities = new();
@@ -66,8 +64,6 @@ class ScoutRepository //Medlemslista
         }
         return upcomingActivities;
     }
-
-    //Skicka påminnelser till alla scouter om kommande aktiviteter
 
     public void SendEmailsToAllScouts()
     {
