@@ -25,6 +25,8 @@ class ScoutUI
         Console.WriteLine("GÖR DITT VAL:");
         Console.WriteLine("A: Registrera scout");
         Console.WriteLine("B: Visa scoutregister");
+        Console.WriteLine("C: Skapa aktivitet");
+        Console.WriteLine("D: Visa aktiviteter");
         Console.WriteLine("Q: Avsluta");
     }
 
@@ -38,10 +40,39 @@ class ScoutUI
         {
             ShowAllScouts();
         }
+        if (input == "C")
+        {
+            CreateActivity();
+        }
+        if (input == "D")
+        {
+            ShowAllActivities();
+        }
         if (input == "Q")
         {
             Environment.Exit(0);
         }
+    }
+
+    private void ShowAllActivities()
+    {
+        Console.Clear();
+        Console.WriteLine("ALLA AKTIVITETER:");
+        foreach (var activity in _repo.GetAllActivities())
+        {
+            Console.WriteLine(activity.Info);
+        }
+        Console.ReadKey();
+    }
+
+    private void CreateActivity()
+    {
+        Console.Clear();
+        string name = GetString("Ange aktivitetens namn:");
+        DateTime date = GetDate("Ange datum för aktiviteten:");
+        _repo.AddActivity(new Activity(name, date));
+        Console.WriteLine("Aktiviteten är skapad!");
+        Console.ReadKey();
     }
 
     private void RegisterScout()
@@ -76,6 +107,19 @@ class ScoutUI
                 return input;
             }
             Console.WriteLine("Du måste ange något!");
+        } while (true);
+    }
+
+    private DateTime GetDate(string prompt = "")
+    {
+        do
+        {
+            Console.WriteLine(prompt);
+            if (DateTime.TryParse(Console.ReadLine(), out DateTime date))
+            {
+                return date;
+            }
+            Console.WriteLine("Du måste ange ett datum!");
         } while (true);
     }
 }
