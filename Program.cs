@@ -1,13 +1,7 @@
 ﻿using ScoutApp.Core;
+using ScoutApp.UI;
 
-ScoutRepository repo = new();
+ScoutRepository repo = new(); //Starta grundfunktionalitet
+ScoutUI ui = new(repo); //Start UI och ge den referens till grundsystemet
 
-repo.AddScout(new Scout("Sam", "sam@scouterna.se"));
-
-repo.AddActivity(new Activity("Plocka svamp", new DateTime(2024, 10, 14, 12, 0, 0)));
-
-repo.RegisterParticipantToActivity(3, 0);
-
-Activity theActivity = repo.GetActivityById(0);
-Console.WriteLine(theActivity.Info);
-
+ui.Run(); //Kör igång huvudloopen
