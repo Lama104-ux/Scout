@@ -23,6 +23,7 @@ static class Input
             if (!string.IsNullOrWhiteSpace(input))
             {
                 return input;
+                //pushar
             }
             Console.WriteLine("Du måste ange något!");
         } while (true);
