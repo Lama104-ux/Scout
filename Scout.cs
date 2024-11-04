@@ -11,5 +11,10 @@ class Scout
         {
             return (int)((DateTime.Now - DateOfBirth.ToDateTime(new TimeOnly(12, 0))).TotalDays / 365.25);
         }
+
     }
+
+
 }
+
+
