@@ -18,6 +18,19 @@ class ScoutUI
 
 
             Console.WriteLine("Hejja hejja!!");
+            Console.WriteLine("HEJ BEA");
+
+
+
+
+
+
+
+
+
+
+
+
             Console.WriteLine("Hej Lama!");
             Console.WriteLine("Hej Laaaaama!");
             Console.WriteLine("Hejjjjjjjjjj jag är hungrig     Beaaaaaaa");
@@ -26,7 +39,7 @@ class ScoutUI
             Console.WriteLine("Jag börjar fatta detta nu! tror jag iaf");
             PrintMenu();
 
-            LamaMenu8();
+            // LamaMenu8();
             MakeChoice(Input.GetChar("Kul att du är hääåäääär, Välj: Hej Bea"));
         }
     }
