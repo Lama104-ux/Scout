@@ -15,6 +15,7 @@ class ScoutUI
         while (true)
         {
             Console.Clear();
+            Console.WriteLine("Hej Lama!");
             PrintMenu();
             MakeChoice(Input.GetChar("Välj: "));
         }
