@@ -18,7 +18,7 @@ class ScoutUI
             Console.WriteLine("Hej Lama!");
             PrintMenu();
             LamaMenu8();
-            MakeChoice(Input.GetChar("Välj: "));
+            MakeChoice(Input.GetChar("Välj: Hej Bea"));
         }
     }
 
