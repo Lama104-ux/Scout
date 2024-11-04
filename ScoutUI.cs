@@ -17,6 +17,7 @@ class ScoutUI
             Console.Clear();
             Console.WriteLine("Hej Lama!");
             Console.WriteLine("Hej Laaaaama!");
+            Console.WriteLine("Hejjjjjjjjjj");
 
             Console.WriteLine("Jag börjar fatta detta nu!");
             PrintMenu();
