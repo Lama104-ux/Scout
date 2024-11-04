@@ -20,6 +20,16 @@ class ScoutUI
             Console.WriteLine("Hejja hejja!!");
             Console.WriteLine("HEJ BEA");
             // gkjthgiuerhiu qrhguhyqog
+            Console.WriteLine("HEJ BEA");
+            Console.WriteLine("HEJ BEA");
+            Console.WriteLine("HEJ BEA");
+            Console.WriteLine("HEJ BEA");
+            Console.WriteLine("HEJ BEA");
+            Console.WriteLine("HEJ BEA");
+            Console.WriteLine("HEJ BEA");
+
+
+
 
 
 
