@@ -19,7 +19,7 @@ class ScoutUI
             Console.WriteLine("Hej Laaaaama!");
             Console.WriteLine("Hejjjjjjjjjj jag är hungrig     Beaaaaaaa");
 
-            Console.WriteLine("Jag börjar fatta detta nu!");
+            Console.WriteLine("Jag börjar fatta inte detta nu!");
             PrintMenu();
 
             LamaMenu8();
