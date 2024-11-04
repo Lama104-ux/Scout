@@ -20,7 +20,7 @@ class ScoutUI
             Console.WriteLine("Jag börjar fatta detta nu!");
             PrintMenu();
             LamaMenu8();
-            MakeChoice(Input.GetChar("Kul att du är här, Välj: "));
+            MakeChoice(Input.GetChar("Kul att du är hääåäääär, Välj: "));
         }
     }
 
