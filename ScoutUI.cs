@@ -15,10 +15,12 @@ class ScoutUI
         while (true)
         {
             Console.Clear();
+
             Console.WriteLine("Hej Lama!");
+            Console.WriteLine("Jag börjar fatta detta nu!");
             PrintMenu();
             LamaMenu8();
-            MakeChoice(Input.GetChar("Välj: Hej Bea"));
+            MakeChoice(Input.GetChar("Kul att du är hääåäääär, Välj: Hej Bea"));
         }
     }
 
