@@ -54,8 +54,7 @@ static class Input
             Console.WriteLine("Du måste ange ett datum!");
         } while (true);
     }
-
-    public static string GetEmail(string prompt = "")
+  public static string GetEmail(string prompt = "")
     {
         do
         {
