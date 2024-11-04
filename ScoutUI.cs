@@ -15,6 +15,9 @@ class ScoutUI
         while (true)
         {
             Console.Clear();
+
+
+            Console.WriteLine("Hejja hejja!!");
             Console.WriteLine("Hej Lama!");
             Console.WriteLine("Hej Laaaaama!");
             Console.WriteLine("Hejjjjjjjjjj jag är hungrig     Beaaaaaaa");
